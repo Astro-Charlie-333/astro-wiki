@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planeten in den Häusern · Astrologie-Lernplattform</title><style>@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#FBF7F2;--card:#FCE9DD;--ink:#2A1B12;--soft:#8A6F5C;--ind:#C1440E;--gold:#D9922E;
+--line:#F0D8C6;--fire:#C1440E;--earth:#6B7C3F;--air:#3E7C9A;--water:#6B5B95;--flow:#4A7C59;--tense:#B5502E;}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:860px;margin:0 auto;padding:34px 20px 80px;}
+.back{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ind);text-decoration:none;margin-bottom:22px;}
+.back:hover{text-decoration:underline;}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+h1{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(32px,6.5vw,52px);line-height:1.03;letter-spacing:-.02em;margin-bottom:14px;color:var(--ind);}
+h1 em{font-style:italic;}
+.lede{font-size:16px;color:var(--soft);max-width:640px;line-height:1.7;margin-bottom:8px;}
+h2{font-family:'Fraunces',serif;font-size:26px;font-weight:600;margin:40px 0 8px;color:var(--ind);}
+h3{font-family:'Fraunces',serif;font-size:19px;font-weight:600;margin:0 0 4px;}
+.sub{font-size:14px;color:var(--soft);margin-bottom:16px;}
+p{margin-bottom:12px;}
+ul,ol{margin:0 0 14px 20px;font-size:15px;line-height:1.7;}
+li{margin-bottom:6px;}
+.tip{background:#FBEFE6;border-left:3px solid var(--gold);border-radius:10px;padding:16px 18px;margin:24px 0;font-size:14px;line-height:1.6;color:var(--soft);}
+.tip b{color:var(--ink);}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-bottom:12px;}
+.card p:last-child{margin-bottom:0;}
+.white{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-bottom:12px;}
+.foot{margin-top:44px;padding-top:22px;border-top:1px dashed var(--line);font-size:12.5px;color:var(--soft);line-height:1.6;}
+.pill{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 9px;border-radius:20px;text-transform:uppercase;letter-spacing:.06em;margin-right:4px;}
+.pill.fire{background:#FBE3DA;color:var(--fire);}.pill.earth{background:#E8EDDC;color:var(--earth);}
+.pill.air{background:#DEEBF1;color:var(--air);}.pill.water{background:#E6E1F0;color:var(--water);}
+a{color:var(--ind);}
+table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:14.5px;}
+th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500;}
+td.mono{font-family:'JetBrains Mono',monospace;font-size:13px;white-space:nowrap;}
+label{display:block;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+select,input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);font-family:'Inter',sans-serif;font-size:15px;color:var(--ink);}
+select:focus,input:focus{outline:2px solid var(--gold);outline-offset:-1px;}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+@media(max-width:600px){.grid,.grid3{grid-template-columns:1fr;}}
+.btn{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;border:1px solid var(--ind);background:var(--ind);color:#fff;padding:11px 20px;border-radius:22px;cursor:pointer;width:auto;}
+.btn.ghost{background:none;color:var(--ind);}
+.btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+.steps{counter-reset:s;list-style:none;margin:0;}
+.steps li{counter-increment:s;position:relative;padding:0 0 0 40px;margin-bottom:18px;font-size:15px;}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--card);border:1px solid var(--line);color:var(--ind);font-family:'JetBrains Mono',monospace;font-size:12px;display:flex;align-items:center;justify-content:center;}
+.steps b{display:block;font-family:'Fraunces',serif;font-size:17px;margin-bottom:2px;}
+.weiter{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:38px 0 0;}
+@media(max-width:560px){.weiter{grid-template-columns:1fr;}}
+.weiter a{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;}
+.weiter a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(193,68,14,.10);}
+.weiter .lbl{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.weiter .ttl{font-family:'Fraunces',serif;font-size:16.5px;font-weight:600;color:var(--ind);line-height:1.25;}
+.weiter .nx{text-align:right;}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0;}
+.chips button{font-family:'Inter',sans-serif;font-size:13.5px;padding:7px 13px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:20px;cursor:pointer;width:auto;}
+.chips button:hover{border-color:var(--ind);}
+.chips button[aria-pressed="true"]{background:var(--ind);border-color:var(--ind);color:#fff;}
+.chips button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px;}
+summary{cursor:pointer;font-family:'Fraunces',serif;font-size:17px;font-weight:600;color:var(--ind);}
+details[open] summary{margin-bottom:8px;}
+details p{font-size:14.5px;color:var(--soft);}
+.kette{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:15px;margin:10px 0;}
+.kette .node{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 12px;font-family:'JetBrains Mono',monospace;font-size:12.5px;}
+.kette .arr{color:var(--gold);font-size:16px;}
+.out{margin-top:16px;padding-top:16px;border-top:1px dashed var(--line);}
+.big{font-family:'Fraunces',serif;font-size:23px;font-weight:600;color:var(--ind);margin-bottom:4px;}
+.mono{font-family:'JetBrains Mono',monospace;}</style></head><body>
+<div class="wrap">
+<a class="back" href="index.html">&larr; Übersicht</a>
+
+<div class="eyebrow">Ein Chart lesen</div>
+<h1>Planeten in den <em>Häusern.</em></h1>
+<p class="lede">Das Zeichen sagt <i>wie</i>, das Haus sagt <i>wo im Leben</i>. Im Reading brauchst du meistens das Haus — denn Klientinnen fragen nach Lebensbereichen, nicht nach Charaktereigenschaften. Wähle Planet und Haus, und du bekommst die Kombination.</p>
+
+
+<h2>Der Unterschied in einem Satz</h2>
+<div class="grid">
+  <div class="card"><h3>Zeichen</h3><p>Der Stil. <span class="mono">Mars in Stier</span> heißt: langsam anlaufend, dann unaufhaltsam.</p></div>
+  <div class="card"><h3>Haus</h3><p>Der Ort. <span class="mono">Mars im 12.</span> heißt: Der Antrieb läuft unsichtbar, auch für dich selbst.</p></div>
+</div>
+<p>Beides zusammen ergibt die eigentliche Aussage: Ein Antrieb, der sich still und beharrlich auflädt, bis er sich in einem Block entlädt. Weder Zeichen noch Haus allein hätten das gesagt.</p>
+
+<h2>Nachschlagen</h2>
+<p class="sub">Planet wählen, dann Haus — oder auf einen Planeten tippen und alle zwölf Häuser durchlesen.</p>
+<div class="white">
+  <label>Planet</label><div class="chips" id="pchips"></div>
+  <label style="margin-top:14px;">Haus</label><div class="chips" id="hchips"></div>
+  <div class="out">
+    <div class="big" id="titel">—</div>
+    <p class="sub mono" id="bereich" style="margin-bottom:10px;"></p>
+    <p style="font-size:16px;margin-bottom:10px;" id="text"></p>
+    <p class="sub" style="margin-bottom:0;" id="frage"></p>
+  </div>
+</div>
+
+<h2>Alle zwölf auf einen Blick</h2>
+<p class="sub">Der gewählte Planet durch alle Häuser — zum Vergleichen und zum Muster-Sehen.</p>
+<div id="alle"></div>
+
+<div class="tip"><b>Wenn ein Planet auf einer Hausgrenze steht:</b> Bei Whole Sign gibt es das kaum — ein Zeichen ist ein Haus. In Placidus dagegen häufig. Dann gilt: beide Bedeutungen lesen und die Person entscheiden lassen, welche sie erkennt. Mehr dazu unter <a href="haeusersysteme.html">Häusersysteme</a>.</div>
+
+<div class="tip"><b>Fürs Reading:</b> Fang immer beim Haus an, nicht beim Planeten. „In welchem Lebensbereich ist gerade die Frage?" — dann schaust du, welcher Planet dort steht und wer das Haus beherrscht. So bleibst du am Anliegen der Person statt an deiner Systematik.</div>
+
+
+<div class="weiter"><a href="planeten-in-zeichen.html"><span class="lbl">&larr; Vorher</span><span class="ttl">Planeten in den Zeichen</span></a><a href="chart-lesen.html" class="nx"><span class="lbl">Weiter &rarr;</span><span class="ttl">Ein Chart lesen</span></a></div>
+<div class="foot">Planeten in den Häusern &middot; Whole Sign. 120 Kombinationen als Nachschlagewerk. Ein Haus beschreibt den Ort, das Zeichen die Art — beides zusammen ergibt die Deutung.</div>
+</div>
+<script>
+var HAUS=[["1", "Person, Körper, Auftreten", "Wie du in einen Raum kommst"], ["2", "Wert, Geld, Ressourcen", "Was dir gehört und was du dir wert bist"], ["3", "Sprache, Lernen, Nahbereich", "Wie du kommunizierst und den Alltag navigierst"], ["4", "Zuhause, Wurzeln, Herkunft", "Wo du herkommst und wohin du dich zurückziehst"], ["5", "Ausdruck, Spiel, Romantik", "Was aus dir herauswill und was Freude macht"], ["6", "Alltag, Arbeit, Gesundheit", "Wie dein Tag gebaut ist"], ["7", "Partnerschaft, Begegnung", "Wie du dem Gegenüber begegnest"], ["8", "Tiefe, Krise, Geteiltes", "Was passiert, wenn es ernst wird"], ["9", "Sinn, Weite, Lehre", "Woran du glaubst und wie weit du denkst"], ["10", "Beruf, Sichtbarkeit", "Wofür du öffentlich stehst"], ["11", "Gruppen, Netzwerke, Ziele", "Wo du dazugehörst und was du anstrebst"], ["12", "Rückzug, Inneres, Unsichtbares", "Was niemand sieht, auch du selbst kaum"]];
+var FRAGEN=["Wie zeigst du dich, wenn du niemandem gefallen musst?",
+ "Woran misst du deinen Wert, wenn Geld keine Rolle spielt?",
+ "Mit wem redest du, wenn dich etwas beschäftigt?",
+ "Wo fühlst du dich zuhause — und seit wann?",
+ "Was machst du, wenn es niemand bewerten würde?",
+ "Wie sieht ein guter gewöhnlicher Tag bei dir aus?",
+ "Was erwartest du von einem Gegenüber, ohne es auszusprechen?",
+ "Was passiert mit dir, wenn es wirklich ernst wird?",
+ "Woran glaubst du, auch ohne Beweis?",
+ "Wofür möchtest du bekannt sein?",
+ "Wo gehörst du dazu, ohne dich anstrengen zu müssen?",
+ "Was weiß niemand über dich?"];
+var TEXTE={"Sonne": ["Du wirst über deine Präsenz sichtbar. Menschen bemerken dich, bevor du etwas gesagt hast — und du brauchst diesen Raum auch.", "Dein Selbstwert hängt spürbar daran, was du hast und leistest. Die Aufgabe: Wert von Besitz entkoppeln.", "Du lebst über Sprache, Neugier und Austausch. Ohne Gespräch und Input geht bei dir das Licht aus.", "Deine Kraft kommt von innen und von zuhause. Erst wenn die Basis stimmt, kannst du nach außen.", "Du bist am meisten du selbst, wenn du etwas erschaffst oder spielst. Ernsthaftigkeit ohne Freude macht dich klein.", "Du definierst dich über nützliche Arbeit und einen funktionierenden Alltag. Die Falle: dich über Leistung zu bewerten.", "Du findest dich über andere. Begegnung ist bei dir kein Zusatz, sondern der Ort, an dem du dich selbst siehst.", "Du wirst dort lebendig, wo es ernst wird. Oberflächliches ermüdet dich, Krisen wecken dich auf.", "Du brauchst Sinn und Horizont. Ein Leben ohne größere Frage dahinter fühlt sich für dich falsch an.", "Deine Identität ist eng mit deinem Beruf verwoben. Das gibt Richtung — und macht Rückschläge dort persönlich.", "Du wirst du selbst in Gruppen und über gemeinsame Ziele. Alleinkämpfen liegt dir nicht.", "Deine Kraft arbeitet im Verborgenen. Du brauchst Rückzug, und du wirkst oft, ohne selbst im Bild zu sein."], "Mond": ["Deine Stimmung ist sofort sichtbar. Du kannst schlecht verbergen, wie es dir geht — was ehrlich macht und verletzlich.", "Sicherheit brauchst du materiell: ein Polster, ein Zuhause, Verlässlichkeit in Zahlen.", "Du verarbeitest Gefühle über Reden und Schreiben. Unausgesprochenes staut sich bei dir schnell.", "Zuhause ist dein emotionaler Anker. Ohne Rückzugsort läufst du auf Reserve.", "Du brauchst Ausdruck, um dich gut zu fühlen — Kreativität, Spiel, jemanden zum Verlieben.", "Sicherheit entsteht bei dir über Routine. Ein kaputter Tagesablauf zieht dir emotional den Boden weg.", "Du fühlst dich über Beziehung. Nähe ist Bedürfnis, nicht Luxus — und Alleinsein kostet dich Kraft.", "Deine Gefühle gehen tief und selten harmlos. Du brauchst wenige Menschen, dafür ganz.", "Du brauchst Weite, um dich wohlzufühlen: Reisen, Lernen, ein Sinn über den Alltag hinaus.", "Dein Wohlbefinden hängt am Beruf. Läuft der nicht, ist auch privat wenig gut.", "Zugehörigkeit ist dein Sicherheitsgefühl. Freundeskreis und Gruppen sind bei dir Familie.", "Du fühlst viel, sagst wenig. Dein Innenleben ist reich und für andere schwer zugänglich."], "Merkur": ["Du denkst laut und schnell — das Sprechen ist Teil des Denkens, nicht sein Ergebnis.", "Du denkst praktisch und in Werten: Was kostet es, was bringt es, was ist es wert?", "Sprache ist dein Heimatgebiet. Viele Interessen, viele Kanäle, manchmal zu viele Fenster gleichzeitig.", "Du denkst über Erinnerung und Herkunft. Alte Gespräche wirken bei dir lange nach.", "Dein Denken ist verspielt und erzählerisch. Du erklärst über Bilder und Geschichten.", "Du denkst analytisch und in Details. Präzise — und schnell zu selbstkritisch.", "Du denkst im Dialog. Alleine kommst du seltener zum Punkt als im Gespräch.", "Du durchschaust Dinge. Dein Denken geht dahin, wo andere wegsehen.", "Du denkst in großen Zusammenhängen. Details langweilen dich, Systeme faszinieren dich.", "Deine Sprache ist beruflich dein Werkzeug. Du wirst über das gesehen, was du sagst und schreibst.", "Du denkst vernetzt und zukunftsorientiert, gern gemeinsam mit anderen.", "Du denkst assoziativ und leise. Vieles weißt du, bevor du es begründen kannst."], "Venus": ["Du zeigst Zuneigung offen und wirkst anziehend, ohne dich anzustrengen.", "Du zeigst Liebe über Handfestes: Zeit, Verlässlichkeit, etwas Schönes schenken.", "Zuneigung läuft bei dir über Worte. Ein guter Satz zählt bei dir mehr als eine Geste.", "Liebe heißt für dich Zuhause: kochen, dableiben, gemeinsam wohnen.", "Du liebst verspielt und romantisch. Verliebtsein ist bei dir ein eigener Lebensbereich.", "Du zeigst Liebe, indem du hilfst. Achtung: sich unentbehrlich zu machen ist keine Nähe.", "Partnerschaft ist bei dir ein zentraler Wert. Du willst zu zweit, nicht nebeneinander.", "Deine Zuneigung ist intensiv und ausschließlich. Halbe Sachen kannst du nicht.", "Du liebst über gemeinsame Weite — reisen, lernen, denken. Fremdheit zieht dich an.", "Beziehung und Beruf berühren sich bei dir. Du wirst über deinen Geschmack sichtbar.", "Du liebst freundschaftlich und auf Augenhöhe. Besitzansprüche sind dir fremd.", "Deine Zuneigung ist still und diskret. Du gibst mehr, als du zeigst."], "Mars": ["Du gehst direkt rein. Dein Antrieb ist sofort da — und dein Ärger auch.", "Du setzt dich für das ein, was dir gehört. Ausdauernd, aber schwer umzustimmen.", "Dein Ärger geht über Worte raus. Streiten kannst du gut, verletzen manchmal auch.", "Dein Antrieb ist häuslich und indirekt. Konflikte in der Familie treffen dich am meisten.", "Du setzt dich über Ausdruck durch. Dein Antrieb braucht Spaß, sonst versandet er.", "Deine Energie geht in Arbeit und Alltag. Fleißig — und die Erschöpfung merkst du zu spät.", "Deine Kraft entzündet sich an anderen. Konflikte in Beziehungen sind bei dir das Trainingsfeld.", "Dein Antrieb ist tief und beharrlich. Du gibst nicht auf, auch wenn du längst solltest.", "Du kämpfst für Überzeugungen. Deine Energie braucht ein Ziel jenseits von dir selbst.", "Dein Ehrgeiz ist beruflich. Du willst etwas erreichen, das man sehen kann.", "Du setzt dich für Gruppen und Anliegen ein. Alleinkämpfen motiviert dich nicht.", "Dein Ärger sammelt sich unsichtbar an — auch vor dir selbst — und kommt dann als Wand."], "Jupiter": ["Du wirkst zuversichtlich und öffnest Türen einfach dadurch, dass du reinkommst.", "Ressourcen wachsen dir zu. Die Kehrseite: Du gibst leicht mehr aus, als da ist.", "Du lernst schnell und breit. Wissen ist bei dir eine Wachstumsquelle.", "Dein Zuhause soll großzügig sein. Wurzeln und Weite gehören für dich zusammen.", "Du wächst über Kreativität und Freude. Großzügig im Ausdruck, manchmal zu viel des Guten.", "Du wächst über Arbeit und Nützlichkeit. Achtung, dir zu viel aufzuladen.", "Partnerschaft bringt dir Wachstum. Menschen erweitern bei dir den Horizont.", "Du wächst durch Krisen. Was andere umwirft, bringt dich weiter.", "Hier ist Jupiter zuhause. Sinn, Reisen, Lehre — dein natürliches Ausdehnungsfeld.", "Beruflich geht dir vieles auf. Sichtbarkeit fällt dir leichter als anderen.", "Netzwerke tragen dich. Deine Chancen kommen über Menschen, die dich kennen.", "Dein Wachstum passiert im Stillen. Hilfe kommt oft aus unerwarteter Richtung."], "Saturn": ["Du nimmst dich selbst ernst — vielleicht zu ernst. Selbstvertrauen musst du dir erarbeiten.", "Geld und Wert sind ein Übungsfeld. Später Sicherheit, aber erarbeitet, nicht geschenkt.", "Sprache und Lernen kosten dich Mühe — und werden dadurch belastbar.", "Die Herkunft war streng oder fordernd. Ein eigenes Zuhause zu bauen ist echte Arbeit.", "Ausdruck und Leichtigkeit sind gehemmt. Kreativität wird bei dir zu einem Handwerk.", "Der Alltag verlangt Disziplin. Struktur trägt dich, Überforderung ist die Gefahr.", "Beziehung ist ernst. Du bindest dich langsam, dafür verlässlich — und trägst zu viel allein.", "Tiefe Themen sind schwer, aber tragfähig. Kontrolle loszulassen ist die Übung.", "Sinnfragen nimmst du ernst. Glauben ist bei dir nichts, was man geschenkt bekommt.", "Beruf ist dein Hauptfeld. Anerkennung kommt spät, hält dafür.", "In Gruppen fühlst du dich fremd oder verantwortlich. Zugehörigkeit ist Arbeit.", "Dein Ringen läuft innen und unsichtbar. Angst und Rückzug sind hier die Themen."], "Uranus": ["Du bist eigen und lässt dich nicht einordnen. Anpassung kostet dich unverhältnismäßig viel.", "Dein Verhältnis zu Geld ist unkonventionell. Sicherheit über Freiheit definiert.", "Du denkst schräg und schnell. Originelle Verknüpfungen, wenig Geduld mit Konventionen.", "Deine Herkunft war unruhig oder unkonventionell. Zuhause muss Freiraum haben.", "Dein Ausdruck ist eigenwillig. Du machst es anders, nicht besser — und das ist der Punkt.", "Dein Alltag verträgt keine starre Routine. Du brauchst wechselnde Rahmen.", "In Beziehungen brauchst du Freiheit. Nähe ja, Enge nein.", "Krisen kommen bei dir plötzlich und verändern grundlegend.", "Deine Weltanschauung ist unabhängig. Du glaubst nichts, weil es alle glauben.", "Dein Beruf ist untypisch oder wechselhaft. Ein normaler Werdegang passt nicht.", "Du gehörst zu den Unangepassten in Gruppen — und bringst genau dadurch Bewegung.", "Deine Freiheit arbeitet im Verborgenen. Ausbrüche kommen ohne Vorankündigung."], "Neptun": ["Du wirkst schwer greifbar. Menschen projizieren viel auf dich.", "Dein Verhältnis zu Geld ist unscharf. Klarheit über Zahlen ist eine echte Übung.", "Dein Denken ist bildhaft und assoziativ, aber schwer zu ordnen.", "Deine Herkunft hat unklare Stellen. Erinnerungen und Erzählungen verschwimmen.", "Dein Ausdruck ist träumerisch und inspiriert. Kunst liegt hier näher als Handwerk.", "Der Alltag entzieht sich dir manchmal. Struktur von außen hilft.", "In Beziehungen idealisierst du. Die Übung: den Menschen sehen, nicht das Bild.", "Grenzen verschwimmen dort, wo es tief wird. Vorsicht mit Verschmelzung.", "Dein Sinnbedürfnis ist groß und spirituell gefärbt.", "Dein Berufsweg ist lange unklar — und kann genau deshalb ungewöhnlich werden.", "Deine Ideale sind kollektiv. Du träumst mit anderen, nicht nur für dich.", "Hier ist Neptun zuhause. Sehr durchlässig, sehr intuitiv, sehr müde bei Reizüberflutung."], "Pluto": ["Du wirkst intensiv, auch wenn du nichts tust. Menschen reagieren stark auf dich.", "Geld und Wert sind Machtthemen. Große Umbrüche in diesem Bereich.", "Dein Denken ist forschend und schonungslos. Worte sind bei dir Werkzeuge mit Wirkung.", "In der Herkunft gab es Macht- oder Schweigethemen. Wurzeln zu klären ist Lebensarbeit.", "Dein Ausdruck ist kompromisslos. Kreativität ist bei dir keine Freizeitbeschäftigung.", "Der Alltag wird immer wieder umgebaut. Arbeit hat für dich existenzielles Gewicht.", "Beziehungen sind intensiv und verwandelnd. Machtfragen gehören dazu.", "Hier ist Pluto zuhause. Tiefe, Krise und Verwandlung sind dein Terrain.", "Deine Überzeugungen sind unerschütterlich — bis sie sich komplett wandeln.", "Beruflich hast du Wirkung. Macht ist ein Thema, das du gestalten musst.", "In Gruppen hast du Einfluss, ob du willst oder nicht.", "Deine Verwandlung passiert im Verborgenen. Große Themen, wenig Zuschauer."]};
+var PLAN=Object.keys(TEXTE);
+var p=0,h=0;
+function chips(box,arr,cb,akt){
+  box.innerHTML='';
+  arr.forEach(function(lab,i){
+    var b=document.createElement('button');b.type='button';b.textContent=lab;
+    b.setAttribute('aria-pressed',i===akt());
+    b.addEventListener('click',function(){cb(i);});
+    box.appendChild(b);
+  });
+}
+function render(){
+  chips(document.getElementById('pchips'),PLAN,function(i){p=i;render();},function(){return p;});
+  chips(document.getElementById('hchips'),HAUS.map(function(x){return x[0]+'.';}),function(i){h=i;render();},function(){return h;});
+  document.getElementById('titel').textContent=PLAN[p]+' im '+HAUS[h][0]+'. Haus';
+  document.getElementById('bereich').textContent=HAUS[h][1].toUpperCase();
+  document.getElementById('text').textContent=TEXTE[PLAN[p]][h];
+  document.getElementById('frage').innerHTML='<b>Coaching-Frage:</b> '+FRAGEN[h];
+  var a=document.getElementById('alle');a.innerHTML='';
+  HAUS.forEach(function(x,i){
+    var d=document.createElement('details');
+    if(i===h) d.open=true;
+    d.innerHTML='<summary>'+PLAN[p]+' im '+x[0]+'. Haus</summary><p class="sub mono" style="margin-bottom:6px;">'+
+      x[1]+' — '+x[2]+'</p><p style="margin-bottom:0;">'+TEXTE[PLAN[p]][i]+'</p>';
+    a.appendChild(d);
+  });
+}
+render();
+</script>
+</body></html>
