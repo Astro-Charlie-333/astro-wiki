@@ -24,6 +24,17 @@ a{color:var(--ind);}
 .stepnum{width:34px;height:34px;border-radius:50%;background:var(--ind);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;}
 .price{background:var(--ink);color:var(--bg);border-radius:16px;padding:24px;margin-bottom:14px;}
 .price h3{color:#F2C4A0;margin-top:0;}
+
+.weiter{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:38px 0 0;}
+@media(max-width:560px){.weiter{grid-template-columns:1fr;}}
+.weiter a{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:14px 16px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;}
+.weiter a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(193,68,14,.10);}
+.weiter .lbl{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.weiter .ttl{font-family:'Fraunces',serif;font-size:16.5px;font-weight:600;color:var(--ind);line-height:1.25;}
+.weiter .nx{text-align:right;}
+.weiter .end{grid-column:1/-1;text-align:center;}
 </style></head><body>
 <div class="wrap"><a class="back" href="index.html">&larr; Startseite</a>
 <div class="eyebrow">Business · Vorlage</div><h1>Deine <em>Über-mich</em>-Seite.</h1><p class="lede">Eine Vorlage für deine Story — dein stärkster Vertrauensanker. Menschen buchen den Menschen, nicht die Methode.</p>
@@ -36,4 +47,5 @@ a{color:var(--ind);}
 <div class="step"><span class="stepnum">4</span><div><div style="font-weight:600;margin-bottom:3px;font-size:15px;">Deine Haltung</div><div style="font-size:14px;color:var(--soft);line-height:1.55;">Ein, zwei Sätze zu deinem Grundsatz: »Ich lese keine Zukunft und stelle keine Diagnosen. Ich zeige dir Anlagen und Muster, damit du dich selbst besser verstehst und bewusster wählst.« Das schafft Sicherheit und Seriosität.</div></div></div>
 <div class="step"><span class="stepnum">5</span><div><div style="font-weight:600;margin-bottom:3px;font-size:15px;">Die Einladung</div><div style="font-size:14px;color:var(--soft);line-height:1.55;">Ende mit einem warmen, niedrigschwelligen nächsten Schritt: »Wenn du neugierig bist, lass uns reden.« Kein Verkaufsdruck — eine offene Tür.</div></div></div>
 </div>
-<div class="tip"><b>Ton:</b> Schreib, wie du sprichst. Warm, echt, du. Menschen spüren Authentizität. Deine Verletzlichkeit (»auch ich habe das gebraucht«) ist keine Schwäche — sie ist der Grund, warum Menschen dir vertrauen werden.</div><div class="foot">Business · Über mich · Deine Astro-Lernplattform.</div></div></body></html>
+<div class="tip"><b>Ton:</b> Schreib, wie du sprichst. Warm, echt, du. Menschen spüren Authentizität. Deine Verletzlichkeit (»auch ich habe das gebraucht«) ist keine Schwäche — sie ist der Grund, warum Menschen dir vertrauen werden.</div><div class="weiter"><a href="ruhe-schlaf.html"><span class="lbl">&larr; Vorher</span><span class="ttl">Ruhe & Schlaf im Chart</span></a><a href="angebote-struktur.html" class="nx"><span class="lbl">Weiter &rarr;</span><span class="ttl">Deine Angebote</span></a></div>
+<div class="foot">Business · Über mich · Deine Astro-Lernplattform.</div></div></body></html>

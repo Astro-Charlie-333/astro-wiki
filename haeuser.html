@@ -30,6 +30,17 @@ p{margin-bottom:12px;}
 .pill.air{background:#DEEBF1;color:var(--air);}
 .pill.water{background:#E6E1F0;color:var(--water);}
 a{color:var(--ind);}
+
+.weiter{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:38px 0 0;}
+@media(max-width:560px){.weiter{grid-template-columns:1fr;}}
+.weiter a{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:14px 16px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;}
+.weiter a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(193,68,14,.10);}
+.weiter .lbl{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.weiter .ttl{font-family:'Fraunces',serif;font-size:16.5px;font-weight:600;color:var(--ind);line-height:1.25;}
+.weiter .nx{text-align:right;}
+.weiter .end{grid-column:1/-1;text-align:center;}
 </style></head><body>
 <div class="wrap">
 <a class="back" href="grundlagen.html">&larr; Grundlagen</a>
@@ -63,5 +74,6 @@ a{color:var(--ind);}
 <span style="width:32px;height:32px;border-radius:8px;background:var(--water);color:#fff;display:flex;align-items:center;justify-content:center;font-family:Fraunces,serif;font-weight:600;flex-shrink:0;">12</span>
 <div><b style="font-family:Fraunces,serif;font-size:16px;">12. Haus — Rückzug & Seele</b><br><span style="font-size:13.5px;color:var(--soft);">Unbewusstes, Spiritualität, Verborgenes, Rückzug.</span></div></div>
 <div class="tip"><b>Die vier Ecken (Achsen) sind am wichtigsten:</b> 1. Haus (Selbst/Aszendent), 4. Haus (Wurzeln/IC), 7. Haus (Beziehung/Deszendent), 10. Haus (Berufung/MC). Planeten nah an diesen Punkten wirken besonders stark.</div>
+<div class="weiter"><a href="zeichen.html"><span class="lbl">&larr; Vorher</span><span class="ttl">Die Zeichen</span></a><a href="aspekte.html" class="nx"><span class="lbl">Weiter &rarr;</span><span class="ttl">Die Aspekte</span></a></div>
 <div class="foot">Grundlagen · Die Häuser · Deine Astro-Lernplattform. Im Whole-Sign-System füllt ein Zeichen genau ein Haus.</div>
 </div></body></html>

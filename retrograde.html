@@ -30,6 +30,17 @@ p{margin-bottom:12px;}
 .pill.air{background:#DEEBF1;color:var(--air);}
 .pill.water{background:#E6E1F0;color:var(--water);}
 a{color:var(--ind);}
+
+.weiter{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:38px 0 0;}
+@media(max-width:560px){.weiter{grid-template-columns:1fr;}}
+.weiter a{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:14px 16px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;}
+.weiter a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(193,68,14,.10);}
+.weiter .lbl{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.weiter .ttl{font-family:'Fraunces',serif;font-size:16.5px;font-weight:600;color:var(--ind);line-height:1.25;}
+.weiter .nx{text-align:right;}
+.weiter .end{grid-column:1/-1;text-align:center;}
 </style></head><body>
 <div class="wrap"><a class="back" href="grundlagen.html">&larr; Grundlagen</a>
 <div class="eyebrow">Grundlagen · Vertiefung</div><h1><em>Rückläufige</em> Planeten.</h1><p class="lede">Was es heißt, wenn ein Planet retrograd ist — im Geburtschart und als Transit.</p>
@@ -38,4 +49,5 @@ a{color:var(--ind);}
 <div class="card"><span style="color:var(--soft);font-size:14px;">Ein Planet, der bei deiner Geburt rückläufig war, wirkt introvertierter, reflektierter, nach innen gerichtet. Die Energie wird eher verinnerlicht als nach außen gelebt. Das ist keine Schwäche — oft eine Einladung, das Thema des Planeten gründlicher und eigenständiger zu durchdenken. Rückläufige Planeten im Geburtschart sind völlig normal (die meisten Menschen haben mehrere).</span></div>
 <h2>Retrograde als Transit (der "berühmte" Merkur rückläufig)</h2>
 <div class="card"><span style="color:var(--soft);font-size:14px;">Wenn ein Planet <i>aktuell</i> am Himmel rückläufig läuft, gilt seine Zeit als Phase des Innehaltens, Überarbeitens, Nochmal-Hinschauens — das "Re-" (Review, Revidieren, Reflektieren). <b>Merkur rückläufig</b> (3-4x im Jahr): Zeit für Missverständnisse, Technik-Pannen, aber auch gut zum Überarbeiten und Klären. <b>Venus rückläufig</b>: alte Beziehungsthemen, Ex-Kontakte, Werte überdenken. <b>Saturn/äußere rückläufig</b>: innere Auseinandersetzung mit deren Themen.</span></div>
-<div class="tip"><b>Nicht dramatisieren:</b> Rückläufigkeit ist kein Fluch. Es ist eine Einladung zum Innehalten und Vertiefen statt Vorpreschen. Ein guter Rhythmus, den die schnelllebige Welt oft vergisst.</div><div class="foot">Grundlagen · Retrograde · Deine Astro-Lernplattform.</div></div></body></html>
+<div class="tip"><b>Nicht dramatisieren:</b> Rückläufigkeit ist kein Fluch. Es ist eine Einladung zum Innehalten und Vertiefen statt Vorpreschen. Ein guter Rhythmus, den die schnelllebige Welt oft vergisst.</div><div class="weiter"><a href="mondknoten.html"><span class="lbl">&larr; Vorher</span><span class="ttl">Die Mondknoten</span></a><a href="planeten-in-zeichen.html" class="nx"><span class="lbl">Weiter &rarr;</span><span class="ttl">Planeten in den Zeichen</span></a></div>
+<div class="foot">Grundlagen · Retrograde · Deine Astro-Lernplattform.</div></div></body></html>

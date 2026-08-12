@@ -67,6 +67,17 @@ tr.next td:first-child{font-weight:600;}
 .opts button.wrong{background:#FBE3DA;border-color:var(--tense);color:var(--tense);}
 .expl{margin-top:10px;font-size:14px;color:var(--soft);line-height:1.6;display:none;}
 .expl.show{display:block;}
+
+.weiter{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:38px 0 0;}
+@media(max-width:560px){.weiter{grid-template-columns:1fr;}}
+.weiter a{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:14px 16px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;}
+.weiter a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(193,68,14,.10);}
+.weiter .lbl{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.weiter .ttl{font-family:'Fraunces',serif;font-size:16.5px;font-weight:600;color:var(--ind);line-height:1.25;}
+.weiter .nx{text-align:right;}
+.weiter .end{grid-column:1/-1;text-align:center;}
 </style></head><body>
 <div class="wrap">
 <a class="back" href="index.html">&larr; Übersicht</a>
@@ -142,6 +153,7 @@ tr.next td:first-child{font-weight:600;}
 <p class="sub">Drei Entscheidungen. Erklärung nach jeder Antwort.</p>
 <div id="quiz"></div>
 
+<div class="weiter"><a href="mondphasen-rhythmus.html"><span class="lbl">&larr; Vorher</span><span class="ttl">Die Mondphasen</span></a><a href="solar-return-light.html" class="nx"><span class="lbl">Weiter &rarr;</span><span class="ttl">Solar Return light</span></a></div>
 <div class="foot">Planetenzyklen &middot; Whole Sign. Umlaufzeiten gerundet; die Lebensmarken verschieben sich individuell um ein bis zwei Jahre. Zyklen wiederholen Themen, keine Schicksale.</div>
 </div>
 

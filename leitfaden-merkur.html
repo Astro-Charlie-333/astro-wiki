@@ -21,6 +21,17 @@ p{margin-bottom:12px;}
 .pill{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;padding:3px 9px;border-radius:20px;text-transform:uppercase;letter-spacing:.06em;margin-right:4px;}
 .pill.fire{background:#FBE3DA;color:var(--fire);}.pill.earth{background:#E8EDDC;color:var(--earth);}.pill.air{background:#DEEBF1;color:var(--air);}.pill.water{background:#E6E1F0;color:var(--water);}
 a{color:var(--ind);}
+
+.weiter{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:38px 0 0;}
+@media(max-width:560px){.weiter{grid-template-columns:1fr;}}
+.weiter a{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:14px 16px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;}
+.weiter a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(193,68,14,.10);}
+.weiter .lbl{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.weiter .ttl{font-family:'Fraunces',serif;font-size:16.5px;font-weight:600;color:var(--ind);line-height:1.25;}
+.weiter .nx{text-align:right;}
+.weiter .end{grid-column:1/-1;text-align:center;}
 </style></head><body>
 <div class="wrap"><a class="back" href="leitfaden.html">&larr; Coaching-Leitfaden</a>
 <div class="eyebrow">Leitfaden · Merkur</div><h1>Den <em>Merkur</em> ansprechen.</h1><p class="lede">Merkur zeigt, wie ein Mensch denkt, lernt und Information aufnimmt. Er bestimmt, WIE du erklären und Fragen stellen musst, damit dein Gegenüber dich wirklich versteht und mitdenkt.</p>
@@ -136,5 +147,6 @@ a{color:var(--ind);}
 <p style="margin-bottom:8px;"><b style="color:var(--gold);">Gute Frage:</b> <i>»Was spürst du, auch wenn du es noch nicht in Worte fassen kannst?«</i></p>
 <p style="margin-bottom:0;"><b style="color:var(--tense);">Vermeide:</b> Harte Logik einfordern, ihn festnageln, das Intuitive abtun.</p>
 </div></div>
+<div class="weiter"><a href="leitfaden-mond.html"><span class="lbl">&larr; Vorher</span><span class="ttl">Den Mond ansprechen</span></a><a href="leitfaden-mars.html" class="nx"><span class="lbl">Weiter &rarr;</span><span class="ttl">Mars ansprechen</span></a></div>
 <div class="foot">Coaching-Leitfaden · Merkur · Deine Astro-Lernplattform.</div>
 </div></body></html>

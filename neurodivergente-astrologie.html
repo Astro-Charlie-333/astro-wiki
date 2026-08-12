@@ -22,6 +22,17 @@ p{margin-bottom:12px;}
 a{color:var(--ind);}
 .step{display:flex;gap:15px;padding:16px 0;border-bottom:1px solid var(--line);}
 .stepnum{width:34px;height:34px;border-radius:50%;background:var(--ind);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;}
+
+.weiter{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:38px 0 0;}
+@media(max-width:560px){.weiter{grid-template-columns:1fr;}}
+.weiter a{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;
+ padding:14px 16px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s;}
+.weiter a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(193,68,14,.10);}
+.weiter .lbl{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.weiter .ttl{font-family:'Fraunces',serif;font-size:16.5px;font-weight:600;color:var(--ind);line-height:1.25;}
+.weiter .nx{text-align:right;}
+.weiter .end{grid-column:1/-1;text-align:center;}
 </style></head><body>
 <div class="wrap"><a class="back" href="index.html">&larr; Startseite</a>
 <div class="eyebrow">Deine Nische</div><h1>Astrologie für <em>anders verdrahtete</em> Köpfe.</h1><p class="lede">Dein Herzstück: wie Astrologie neurodivergenten Menschen Selbstverständnis schenkt — ohne Pathologisierung, mit Sprache statt Scham.</p>
@@ -38,4 +49,5 @@ a{color:var(--ind);}
 <b style="color:var(--ind);">Der springende Geist:</b> Luft-Betonung oder ein aktiver Merkur (Zwillinge) kann sich mit dem schnellen, assoziativen, vielspurigen Denken decken.<br><br>
 <b style="color:var(--ind);">Das Bedürfnis nach Freiheit:</b> Uranus-Betonung oder Wassermann-Themen spiegeln oft das Anderssein und den Wunsch, nicht in Normen zu passen.</p></div>
 <div class="tip" style="border-left-color:var(--tense);"><b>Ganz wichtige Grenze:</b> Astrologie <i>diagnostiziert nicht</i> und <i>ersetzt keine fachliche Abklärung oder Therapie</i>. Du sagst nie »dein Chart zeigt, dass du ADHS hast«. Neurodivergenz wird fachlich diagnostiziert, nicht astrologisch. Du arbeitest nur mit Menschen, die sich selbst schon so verstehen, und gibst ihnen zusätzliches Selbstverständnis — als Ergänzung, nie als Ersatz für Fachleute. Diese Grenze schützt alle.</div>
-<div class="tip"><b>Dein Vorteil:</b> Du bist selbst anders verdrahtet und hast dich durch Astrologie besser verstehen gelernt. Das macht dich glaubwürdig wie kein Zertifikat. Du sprichst aus Erfahrung, nicht aus Theorie — und genau das suchen Menschen, die sich endlich verstanden fühlen wollen.</div><div class="foot">Deine Nische · Neurodivergente Astrologie · Deine Astro-Lernplattform.</div></div></body></html>
+<div class="tip"><b>Dein Vorteil:</b> Du bist selbst anders verdrahtet und hast dich durch Astrologie besser verstehen gelernt. Das macht dich glaubwürdig wie kein Zertifikat. Du sprichst aus Erfahrung, nicht aus Theorie — und genau das suchen Menschen, die sich endlich verstanden fühlen wollen.</div><div class="weiter"><a href="learning-seite.html"><span class="lbl">&larr; Vorher</span><span class="ttl">Die Learning-Seite</span></a><a href="neurodivergenz-vertiefung.html" class="nx"><span class="lbl">Weiter &rarr;</span><span class="ttl">Neurodivergenz im Chart</span></a></div>
+<div class="foot">Deine Nische · Neurodivergente Astrologie · Deine Astro-Lernplattform.</div></div></body></html>
